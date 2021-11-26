@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Demo</title>
+    </head>
+    <body>
+        <h1>Form Demo</h1>
+        <!-- action is important, it tell where to send form to -->
+        <!-- when send a form https request is sent -->
+        <form action="/to_somewhere">
+            <!-- for="" will connect with element id in this case "username" -->
+            <p>
+                <label for="username">
+                    <!-- place holder attribute is to show pre input word -->
+                    username
+                </label>
+                <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    placeholder="Username"
+                />
+            </p>
+            <!-- when using name in form, during the submit it will appear in link, this will use for get data from server -->
+            <!-- in this case it is ?username=test -->
+            <!-- http://127.0.0.1:5500/to_somewhere?username=test -->
+            <p>
+                <label for="checkbox">checkbox</label>
+                <input type="checkbox" name="checkbox" id="checkbox" />
+            </p>
+            <p>
+                <label for="password">Input Password</label>
+                <input type="password" placeholder="Password" id="password" />
+            </p>
+            <p>
+                <label for="color">Select color: </label>
+                <input type="color" id="color" />
+            </p>
+            <p>
+                <label for="number">Input number: </label>
+                <input type="number" , placeholder="Number" id="number" />
+            </p>
+            <!-- button inside the form by default it will be submit -->
+            <button type="button">Submit</button>
+            <input type="submit" />
+        </form>
+    </body>
+</html>
