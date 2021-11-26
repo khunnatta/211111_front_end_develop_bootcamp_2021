@@ -24,7 +24,8 @@
                     placeholder="Username"
                 />
             </p>
-            <!-- when using name in form, during the submit it will appear in link, this will use for get data from server -->
+            <!-- when using name in form, during the submit it will appear in link, 
+                this will use for get/post data from server -->
             <!-- in this case it is ?username=test -->
             <!-- http://127.0.0.1:5500/to_somewhere?username=test -->
             <p>
@@ -41,11 +42,190 @@
             </p>
             <p>
                 <label for="number">Input number: </label>
-                <input type="number" , placeholder="Number" id="number" />
+                <input
+                    type="number"
+                    placeholder="Number"
+                    min="0"
+                    max="10"
+                    step="2"
+                    id="number"
+                />
             </p>
             <!-- button inside the form by default it will be submit -->
             <button type="button">Submit</button>
             <input type="submit" />
         </form>
+
+        <hr />
+        <!-- Searching from other web using form -->
+        <h1>Using input form to sent data to google</h1>
+        <form action="https://www.reddit.com/search/">
+            <label for="searchReddit">
+                Search from Reddit:
+                <input type="text" name="q" id="searchReddit" />
+            </label>
+            <button type="submit">Search Reddit</button>
+        </form>
+
+        <hr />
+
+        <h1>Search from Google</h1>
+        <form action="https://www.google.com/search">
+            <label for="searchGoogle">
+                Search from Google:
+                <input type="text" name="q" id="searchGoogle" />
+            </label>
+            <button type="submit">Search Google</button>
+        </form>
+
+        <hr />
+
+        <h1>Search from youtube</h1>
+        <form action="https://www.youtube.com/results">
+            <label for="searchYoutube">
+                Search from Youtube:
+                <input type="text" name="q" id="searchYoutube" />
+            </label>
+            <button type="submit">Search Youtube</button>
+        </form>
+
+        <hr />
+
+        <!-- Checkbox & Radio button -->
+        <h1>CheckBox & RadioButton</h1>
+
+        <h2>CheckBox</h2>
+        <form action="">
+            <label for="agree">
+                <!-- in checkbox it can be pre checked using "checked" -->
+                Agree: <input type="checkbox" name="agree" id="agree" checked />
+            </label>
+            <label for="decline">
+                Decline: <input type="checkbox" name="decline" id="decline" />
+            </label>
+            <button>Submit</button>
+            <!-- the result of checkbox "?agree=on" -->
+        </form>
+
+        <h2>RadioButton</h2>
+        <!-- to make radio button group it should be the same name -->
+        <!-- Radio button need value to clearify which one is selected -->
+        <form action="">
+            <label for="agree">
+                Agree:
+                <input
+                    type="radio"
+                    name="agreement"
+                    id="agree"
+                    value="agree"
+                    checked
+                />
+            </label>
+            <label for="decline">
+                Decline:
+                <input
+                    type="radio"
+                    name="agreement"
+                    id="decline"
+                    value="decline"
+                />
+            </label>
+            <button>Submit</button>
+        </form>
+        <!-- the result of radio button "?agreement=decline" -->
+
+        <hr />
+
+        <!-- drop down list -->
+        <h1>drop down</h1>
+
+        <form action="">
+            <label for="pet-select">
+                Choose pets:
+                <select name="pets" id="pet-select">
+                    <option value="" selected>Please select an option</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="chicken">Chicken</option>
+                    <option value="fish">Fish</option>
+                </select>
+            </label>
+            <button>Submit</button>
+        </form>
+        <!-- the result of drop down list "?pets=chicken" -->
     </body>
+
+    <hr />
+    <!-- range -->
+    <form action="">
+        <label for="level">
+            level: <input name="level" type="range" min="0" max="100" />
+        </label>
+        <button>Submit</button>
+    </form>
+    <hr />
+    <!--text area-->
+    <form action="">
+        <label for="request">
+            <textarea
+                id="request"
+                name="request"
+                id=""
+                cols="30"
+                rows="10"
+            ></textarea>
+        </label>
+    </form>
+
+    <!-- Validation Demo (Requirement of Form) -->
+    <hr />
+    <h1>Validations</h1>
+    <!-- use "required" attribute to make the form require to input-->
+    <form action="/dummy">
+        <div>
+            <label for="firstName">
+                First Name:
+                <input type="text" name="firstName" id="firstName" required />
+            </label>
+        </div>
+
+        <!-- use minlength & maxlength to limit the length of word to input -->
+        <div>
+            <label for="username">
+                username:
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    required
+                    minlength="5"
+                    maxlength="20"
+                />
+            </label>
+        </div>
+
+        <!-- Matching pattern validator -->
+        <div>
+            <label for="email">
+                email:
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    minlength="5"
+                    maxlength="20"
+                />
+            </label>
+        </div>
+
+        <div>
+            <label for="url">
+                url:
+                <input type="url" name="url" id="url" required />
+            </label>
+        </div>
+
+        <button>Submit</button>
+    </form>
 </html>
