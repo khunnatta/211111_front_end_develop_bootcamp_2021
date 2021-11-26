@@ -1,0 +1,35 @@
+h1 {
+    /* text-align will align text within the element */
+    text-align: center;
+    /* font-weight is for thickness of text */
+    font-weight: 500;
+    /* text decoration is under line */
+    text-decoration: underline dotted pink;
+    text-decoration: overline dotted pink;
+    text-decoration: line-through wavy pink;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+}
+
+p {
+    /* line-height is the space between each line; */
+    /* using line height without unit it will use the number multiply by font size */
+    line-height: 3;
+
+    /* letter spacing is for space between each character */
+    letter-spacing: 3px;
+
+    /* font size */
+    /* px is absolute unit not recommend for responsive website */
+    font-size: 16px;
+
+    /* font family is to set font */
+    /* font is use as step use the first, if not available, use the second */
+    font-family: Arial, sans-serif;
+
+    /* text transform is use to capitalize, uppercase & lowercase */
+    text-transform: uppercase;
+}
