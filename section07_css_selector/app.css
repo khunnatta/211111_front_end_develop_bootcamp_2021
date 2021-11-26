@@ -11,11 +11,14 @@ button {
     background-color: #a8dadc;
 }
 
-h1,h2 {
+h1,
+h2 {
     color: #1d3557;
 }
 
-#signup{
+/* ID is use for specified style among other */
+/* ID must be unique in one page */
+#signup {
     background-color: #1d3557;
     color: #f1faee;
 }
@@ -52,24 +55,30 @@ input[type="password"] {
     color: greenyellow;
 }
 
-a[href*="google"]{
+a[href*="google"] {
     color: #1d3557;
 }
 
-
+/* class with : is pseudo class */
+/* :hover will effect only when we hover cursor above */
 .post a:hover {
     text-decoration: underline;
 }
 
-
+/* active will effect only when we click on them & not release yet */
 .post button:active {
     background-color: #02c39a;
 }
 
-.post:nth-of-type(2n){
+/* nth-of-type will effect on the specific count of that element */
+/* e.g. :nth-of-type(3) ==> will effect on the third of element */
+/* in this case it will effect on the even count of the element */
+.post:nth-of-type(2n) {
     background-color: #dfe8dc;
 }
 
+/* :: pseudo element */
+/* pseudo element is about to specific the "thing" in inside the element */
 h2::first-letter {
     font-size: 50px;
 }
@@ -78,6 +87,7 @@ p::first-line {
     color: purple;
 }
 
+/* color of text that being select (drag mouse) */
 p::selection {
     background-color: #fcbf49;
 }
