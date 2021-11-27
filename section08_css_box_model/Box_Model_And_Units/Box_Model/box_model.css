@@ -1,0 +1,66 @@
+/* these parameter will effect only in conctent box*/
+p {
+    width: 700px;
+    background-color: pink;
+}
+
+/* these is attribute is for outer border of the content */
+h1 {
+    border-width: 2px;
+    border-color: pink;
+    border-left-color: black;
+    border-style: dashed;
+    /* border radius is for cureve edge of box */
+    /* if the unit is % it will be the % of the element width */
+    border-radius: 20%;
+}
+
+/* The border parameter can be used in one line */
+h2 {
+    border: 4px solid black;
+}
+
+#testPadding {
+    background-color: grey;
+    color: white;
+    /* padding 1 value = padding all direction same value */
+    /* padding 2 value = (top&bottom) (left&right) */
+    /* padding 3 value = (top) (left&right) (bottom)*/
+    /* padding 4 value = (top) (right) (bottom) (left)*/
+    padding: 10px;
+}
+
+#testMargin {
+    background-color: skyblue;
+    margin: 10px;
+}
+
+/* display property: respone on how object display on screen */
+/* it will effect on it self */
+/* in this case it will turn h1 into inline object */
+/* 
+    most common used is inline, block & inline-block
+ */
+h1 {
+    display: inline;
+}
+
+/* Span default was inline if you see in html result */
+/* the span will not effect on other line (top & bottom) */
+/* it will effect only element in the sameline */
+span {
+    margin: 50px;
+    padding: 20px;
+    border: solid black 10px;
+}
+
+/* using inline-block the element will take space both vertical & horizontal*/
+/* but they will stay in the same line */
+#inline-block {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    border: solid black 10px;
+}
+
