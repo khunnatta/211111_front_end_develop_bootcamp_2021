@@ -7,16 +7,18 @@ div {
     display: inline-block;
 }
 
-
 #middle {
     background-color: #81b29a;
 }
 
+/* Position Static will not change to any position parameter like top */
 #static #middle {
     position: static;
     top: 100px;
 }
-
+/* Realative Position is in the normal flow of html but
+ top left parameter will relative to it self */
+/* top 50px mean push it down from the current position for 50px */
 #relative #middle {
     position: relative;
     top: 50px;
@@ -27,6 +29,9 @@ div {
     position: relative;
 }
 
+/* absolute element the element will be remove from the normal document flow
+and can be set position freely */
+/* without position value it will be place on the default element flow position */
 #absolute #middle {
     position: absolute;
     top: 1px;
