@@ -1,0 +1,118 @@
+html {
+    box-sizing: border-box; /* use the width size as border */
+    font-family: "Open san", sans-serif;
+}
+
+body {
+    background-color: #1da1f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pricing-table {
+    background-color: #f5f8fa;
+    border-radius: 1em;
+    padding: 1em 1.5em;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing-plan {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.pricing-img {
+    margin-bottom: 1em;
+    max-width: 100%;
+}
+
+.pricing-header {
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pricing-feature {
+    margin: 2em 0 1em;
+    color: #016ff9;
+}
+
+.pricing-features-item {
+    color: #016ff9;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 1em 0;
+    border-top: 1px solid #e1f1ff;
+    list-style-type: none;
+}
+
+.pricing-features-item:last-child {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price {
+    color: #016ff9;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pricing-button {
+    border: 1px solid #93d1ff;
+    color: #016ff9;
+    font-weight: 600;
+    border-radius: 1em;
+    display: inline-block;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    margin: 1em 0;
+    transition: all 200ms ease-in-out color;
+    transition-property: background-color;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+    background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+    background-color: #48aaff;
+    color: white;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+    background-color: #e1f1ff;
+    color: #016ff9;
+}
+
+@media (min-width: 900px) {
+    .pricing-table {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 75vw;
+    }
+
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+        padding: 25px 50px;
+    }
+
+    .pricing-plan:last-child {
+        border-right: none;
+        border-top: none;
+    }
+}
