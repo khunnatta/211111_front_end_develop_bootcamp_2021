@@ -26,6 +26,7 @@ const delayedColorChange = (newColor, delay, doNext) => {
 }
 
 // STILL A LOT OF NESTING!!!
+// Use nesting to control 
 delayedColorChange('red', 1000, () => {
     delayedColorChange('orange', 1000, () => {
         delayedColorChange('yellow', 1000, () => {
